@@ -1,0 +1,22 @@
+{% extends "AppWeb/padre.html" %} 
+
+
+{% load static %} 
+
+
+{% block titulo %} 
+
+Aqui pueden dejar sus entregables
+
+
+{% endblock %}
+
+{% block descripcion %} 
+
+Cualquier duda, consulten!
+
+<form action="/AppWeb/entregables/" method="GET">
+
+    <input type="submit", value="entregar">
+
+{% endblock %}

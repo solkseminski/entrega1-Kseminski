@@ -1,0 +1,33 @@
+{% extends "AppWeb/padre.html" %} 
+
+
+{% load static %} 
+
+
+{% block titulo %} 
+
+Aqui se encuentran los estudiantes 
+
+
+{% endblock %}
+
+{% block descripcion %} 
+
+Suerte en el curso!
+
+<h1>Formulario para ingreso de estudiantes.</h1>
+
+
+<form action="/AppWeb/estudianteFormulario" method="GET">{% csrf_token %}
+    <table>
+
+        {{ miformulario.as_table }}
+
+    </table>
+
+    <input type="submit", value="enviar formulario">
+
+</form>
+
+
+{% endblock %}

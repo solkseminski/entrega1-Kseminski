@@ -1,0 +1,29 @@
+{% extends "AppWeb/padre.html" %} 
+
+
+{% load static %} 
+
+
+{% block titulo %} 
+
+Aqui se encontrarán sus cursos.
+
+
+{% endblock %}
+
+{% block descripcion %} 
+
+Esperamos que les sea de utilidad!
+
+<form action="/AppWeb/cursoFormulario" method="GET">{% csrf_token %}
+    <table>
+
+        {{ miformulario.as_table }}
+
+    </table>
+
+    <input type="submit", value="buscar mi curso">
+
+</form>
+
+{% endblock %}

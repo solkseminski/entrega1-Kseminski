@@ -1,0 +1,20 @@
+
+<h1>Formulario para ingreso de estudiantes.</h1>
+
+{% if miformulario.errors %} 
+
+<p style="color:blueviolet;">Estan mal los datos, revisar</p>
+
+{% endif %} 
+
+<form action="" method="POST">{% csrf_token %}
+    <table>
+
+        {{ miformulario.as_table }}
+
+    </table>
+
+    <input type="submit", value="enviar">
+
+
+</form>
